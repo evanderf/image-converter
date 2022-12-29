@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project uses [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 1.1.0 - 2022-12-27
+
+### Added
+
+- Added Custom ExceptionFilter.
+
 ## 1.0.0 - 2022-12-24
 
 ### Added

@@ -9,6 +9,7 @@ using System.Net;
 using System.Threading.Tasks;
 using System.Net.Http.Headers;
 using Imagination.Helpers;
+using Imagination.Filters;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -32,6 +33,7 @@ namespace Imagination.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("convert")]
+        [TypeFilter(typeof(CustomExceptionFilter))]
         [RequestFormLimits(MultipartBodyLengthLimit = 26214400)] // Max 25 MB file size
         [ProducesResponseType(typeof(FileContentResult), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
